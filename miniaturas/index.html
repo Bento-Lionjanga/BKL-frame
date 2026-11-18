@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bento Lionjanga – Portefólio</title>
+  <!-- Fontes do Google (nome em caligrafia, títulos e texto) -->
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;600&family=Kaushan+Script&display=swap" rel="stylesheet">
+  <!-- Liga ao ficheiro de estilo (cores, tamanhos, fontes) -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main class="wrap">
+
+  <!-- ========== 1. TOPO ========== -->
+  <header class="hero" id="inicio">
+    <div>
+      <h1 id="nome" aria-label="Bento Lionjanga">Bento Lionjanga</h1>
+      <!-- As funções animadas são escolhidas em js/main.js -->
+      <p class="role" id="roles">Filmmaker e estrategista de conteúdos</p>
+      <div class="btns">
+        <a class="btn main" href="#contacto">Fala comigo</a>
+        <a class="btn alt" href="#trabalhos">Ver trabalhos</a>
+      </div>
+    </div>
+    <!-- O círculo de fotos é preenchido por js/main.js -->
+    <div class="photo">
+      <div class="stage" id="stage"></div>
+      <div class="dots" id="dots"></div>
+    </div>
+  </header>
+
+  <!-- ========== 2. SOBRE MIM ========== -->
+  <section id="sobre">
+    <h2>Sobre mim</h2>
+    <p>Sou produtor e criativo no departamento de comunicação e imagem e presto serviços como profissional autónomo em estratégia de marketing, design e audiovisual.</p>
+    <p>Estudo Ciências da Computação no IMETRO e tenho formação em Inteligência Artificial. Junto o olhar criativo com a lógica técnica, para planear, produzir e entregar projetos organizados e dentro do prazo.</p>
+  </section>
+
+  <!-- ========== 3. O QUE FAÇO ========== -->
+  <section id="areas">
+    <h2>O que faço</h2>
+    <ul class="areas">
+      <!-- Cada <li> é uma área. Para adicionar, copia um <li> inteiro. -->
+      <li>
+        <h3>Audiovisual</h3>
+        <div>
+          <p>Planeamento, captação e edição de vídeo, e montagem de transmissões ao vivo com várias câmaras e mesa de corte.</p>
+          <span class="tags">Realização, edição, transmissão</span>
+        </div>
+      </li>
+      <li>
+        <h3>Design</h3>
+        <div>
+          <p>Materiais visuais para comunicação institucional e para marcas, com identidade coerente em todos os formatos.</p>
+          <span class="tags">Design gráfico, imagem de marca</span>
+        </div>
+      </li>
+      <li>
+        <h3>Estratégia de conteúdos</h3>
+        <div>
+          <p>Definição de objetivos, linha editorial e calendário de publicações, para que cada conteúdo tenha uma razão de existir.</p>
+          <span class="tags">Marketing, redes sociais, planeamento</span>
+        </div>
+      </li>
+      <li>
+        <h3>Informática</h3>
+        <div>
+          <p>Programação Java para web e HTML, uso de Linux e Windows, diagnóstico de problemas técnicos e ferramentas de Inteligência Artificial.</p>
+          <span class="tags">Java web, HTML, Linux, IA, suporte técnico</span>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ========== 4. TRABALHOS ========== -->
+  <section id="trabalhos">
+    <h2>Trabalhos</h2>
+    <ul class="cat">
+      <!--
+        COMO ADICIONAR UM TRABALHO:
+        1. Escolhe a categoria (o <li> certo).
+        2. Apaga a linha <p class="soon">...</p> e escreve a tua descrição num <p>.
+        3. Por baixo, cola este bloco (muda LINK, o título, a descrição e o domínio):
+
+        <div class="cards">
+          <a class="card" href="LINK" target="_blank" rel="noopener">
+            <div class="thumb">
+              <img src="miniaturas/nome-da-imagem.jpg" alt="">
+              <span class="play"></span>
+            </div>
+            <div class="body">
+              <strong>Título do trabalho</strong>
+              <p class="desc">Descrição curta.</p>
+              <span class="dom">youtu.be</span>
+            </div>
+          </a>
+        </div>
+        Para um segundo trabalho, copia só o bloco <a class="card"> ... </a>.
+        https://web.facebook.com/share/r/1FYExhG8VL/
+      -->
+      <li><h3>Audiovisual</h3><div><p class="soon">Produtor de Streamer.</p></div></li>
+          <div class="cards">
+          <a class="card" href="https://web.facebook.com/share/v/1E3cGppbvW/" target="_blank" rel="noopener">
+            <div class="thumb">
+              <img src="MINIATURA1.jpg" alt="">
+              <span class="play"></span>
+            </div>
+            <div class="body">
+              <strong>Streamer</strong>
+              <p class="desc">edição.</p>
+              <span class="dom">facebook.com</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="cards">
+          <a class="card" href="https://web.facebook.com/share/r/1FYExhG8VL/" target="_blank" rel="noopener">
+            <div class="thumb">
+              <img src="MINIATURA2.jpg" alt="">
+              <span class="play"></span>
+            </div>
+            <div class="body">
+              <strong>rel</strong>
+              <p class="desc">edição.</p>
+              <span class="dom">facebook.com</span>
+            </div>
+          </a>
+        </div>
+        
+        <div class="cards">
+          <a class="card" href="https://www.youtube.com/live/Ul2qf-dWRTo?si=Jk1oW6Q-ap1DDrSZ" target="_blank" rel="noopener">
+            <div class="thumb">
+              <img src="MINIATURA6.jpg" alt="">
+              <span class="play"></span>
+            </div>
+            <div class="body">
+              <strong>Strimer</strong>
+              <p class="desc">Transmissão ao vivo de cultos, eventos e programas com  qualidade.</p>
+              <span class="dom">youtube.com</span>
+            </div>
+          </a>
+        </div>  
+
+      <li><h3>Design</h3><div><p class="soon">Design pod cast opnião cristão.</p></div></li>
+      <div class="cards">
+          <a class="card" href="https://web.facebook.com/share/p/1KfQEvuD64/" target="_blank" rel="noopener">
+            <div class="thumb">
+              <img src="MINIATURA3/nome-da-imagem.jpg" alt="">
+              <span class="play"></span>
+            </div>
+            <div class="body">
+              <strong>opnião cristã</strong>
+              <p class="desc">Design para o podcast.</p>
+              <span class="dom">facebook.com</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="cards">
+          <a class="card" href="https://web.facebook.com/share/p/19hW6qvSwW/" target="_blank" rel="noopener">
+            <div class="thumb">
+              <img src="MINIATURA4/nome-da-imagem.jpg" alt="">
+              <span class="play"></span>
+            </div>
+            <div class="body">
+              <strong>opnião cristã</strong>
+              <p class="desc">Design para o podcast.</p>
+              <span class="dom">facebook.com</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="cards">
+          <a class="card" href="https://web.facebook.com/share/p/1G25MASHUD/" target="_blank" rel="noopener">
+            <div class="thumb">
+              <img src="MINIATURA5/nome-da-imagem.jpg" alt="">
+              <span class="play"></span>
+            </div>
+            <div class="body">
+              <strong>Flayer</strong>
+              <p class="desc">Design Tarde Musical do Departamento dos Adolescentes.</p>
+              <span class="dom">facebook.com</span>
+            </div>
+          </a>
+        </div>
+
+      <li><h3>Estratégia de conteúdos</h3><div><p class="soon">Descrição e links em breve.</p></div></li>
+      <li><h3>Informática</h3><div><p class="soon">Descrição e links em breve.</p></div></li>
+    </ul>
+  </section>
+
+  <!-- ========== 5. FORMAÇÃO ========== -->
+  <section id="formacao">
+    <h2>Formação</h2>
+    <ol class="tl">
+      <li><h3>Licenciatura em Ciências da Computação</h3><span>Instituto Metropolitano de Angola (IMETRO), 2.º ano, 2026/2027</span></li>
+      <li><h3>Curso de Inteligência Artificial</h3><span>TEMMAIS</span></li>
+      <li><h3>Ensino Médio, Ciências Exatas</h3><span>Liceu de Benguela, concluído em 2023/2024</span></li>
+    </ol>
+  </section>
+
+  <!-- ========== 6. CONTACTO ========== -->
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>Disponível para vagas e projetos de audiovisual, conteúdos, design e informática.</p>
+    <p>
+      <strong>Email:</strong> <a href="mailto:bentolionjanga@gmail.com">bentolionjanga@gmail.com</a><br>
+      <strong>WhatsApp:</strong> <a href="https://wa.me/244936674582">936 674 582</a><br>
+      <strong>Telefone:</strong> <a href="tel:+244936674582">936 674 582</a> / <a href="tel:+244954133591">954 133 591</a>
+    </p>
+  </section>
+
+</main>
+
+<footer><div class="wrap">Bento Kalundungo Lionjanga</div></footer>
+
+<!-- Liga ao ficheiro de movimento (animações e fotos) -->
+<script src="js/main.js"></script>
+</body>
+</html>

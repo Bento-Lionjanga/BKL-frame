@@ -1,0 +1,111 @@
+/* =====================================================
+   1. CORES E FONTES
+   Para mudar uma cor, muda o valor #... aqui.
+   O segundo bloco é para o modo escuro.
+   ===================================================== */
+:root{
+  --bg:#F4F7FA;      /* fundo da página */
+  --ink:#13202C;     /* cor do texto */
+  --muted:#4E6175;   /* texto mais apagado */
+  --link:#1F4468;    /* azul dos títulos e links */
+  --line:#C9D7E3;    /* linhas */
+  --frame:#E4EDF4;   /* fundo de caixas */
+  --accent:#E8A33D;  /* âmbar (botão e destaques) */
+  --display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+  --body:"Figtree","Segoe UI",system-ui,sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0E1822; --ink:#E8EEF4; --muted:#9DB0C3; --link:#8EC3EA;
+    --line:#27394A; --frame:#15283A; --accent:#F0B24F;
+    color-scheme:dark;
+  }
+}
+
+/* =====================================================
+   2. BASE (regras gerais para toda a página)
+   ===================================================== */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.6 var(--body)}
+a{color:var(--link)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:62rem;margin:0 auto;padding:0 1.25rem}
+section{padding:4rem 0;border-top:1px solid var(--line)}
+h1,h2,h3{font-family:var(--display);line-height:1.1;margin:0}
+h2{font-size:clamp(1.6rem,4vw,2.2rem);font-weight:700;margin-bottom:1.5rem}
+p{margin:0 0 1rem;max-width:62ch}
+footer{padding:2.5rem 0 3rem;border-top:1px solid var(--line);color:var(--muted);font-size:.95rem}
+
+/* =====================================================
+   3. TOPO (nome, funções, botões, foto)
+   ===================================================== */
+.hero{display:grid;gap:2.5rem;padding:3.5rem 0 4rem;align-items:center}
+@media(min-width:56rem){.hero{grid-template-columns:1.1fr 1fr}}
+
+/* Nome em caligrafia */
+h1{font-family:"Kaushan Script","Brush Script MT",cursive;font-size:clamp(3rem,11vw,5.2rem);font-weight:400;line-height:1.1}
+.l{display:inline-block;animation:rise .7s both cubic-bezier(.2,.8,.2,1)}
+@keyframes rise{from{transform:translateY(45%);opacity:0}to{transform:none;opacity:1}}
+
+/* Funções animadas */
+.role{overflow:hidden;white-space:nowrap;min-height:1.7em;margin:1.25rem 0 1.75rem;font:600 clamp(1.15rem,4.6vw,1.6rem)/1.5 var(--display);color:var(--link)}
+.ch{display:inline-block}
+
+/* Botões */
+.btns{display:flex;flex-wrap:wrap;gap:.75rem}
+.btn{display:inline-block;padding:.75rem 1.25rem;border-radius:.4rem;font-weight:600;text-decoration:none}
+.btn.main{background:var(--accent);color:#1B1204}
+.btn.alt{border:2px solid var(--link);color:var(--link)}
+
+/* Fotos em círculo */
+.photo{position:relative;width:min(100%,20rem);aspect-ratio:1/1;justify-self:center;margin-bottom:2.25rem}
+.photo::before{content:"";position:absolute;inset:0;transform:translate(.9rem,.9rem);border:3px solid var(--accent);border-radius:50%}
+.stage{position:absolute;inset:0;overflow:hidden;border-radius:50%;background:var(--frame)}
+.slide{position:absolute;inset:0;opacity:0;transition:opacity .6s ease}
+.slide.on{opacity:1}
+.slide img{width:100%;height:100%;object-fit:cover;display:block}
+.ph{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.4rem;color:var(--muted)}
+.ph b{font:800 4rem var(--display);color:var(--link)}
+.ph:nth-child(2){background:color-mix(in srgb,var(--accent) 28%,var(--frame))}
+.ph:nth-child(3){background:color-mix(in srgb,var(--link) 22%,var(--frame))}
+.dots{position:absolute;left:0;right:0;bottom:-2.1rem;display:flex;gap:.5rem;justify-content:center}
+.dots button{width:.6rem;height:.6rem;padding:0;border:0;border-radius:1rem;background:var(--line);cursor:pointer;transition:width .3s,background .3s}
+.dots button.on{width:1.6rem;background:var(--accent)}
+
+/* =====================================================
+   4. O QUE FAÇO e TRABALHOS (lista com título à esquerda)
+   ===================================================== */
+.areas,.cat{list-style:none;margin:0;padding:0}
+.areas>li,.cat>li{display:grid;gap:.5rem 2rem;padding:1.5rem 0;border-bottom:1px solid var(--line)}
+.areas>li:first-child,.cat>li:first-child{padding-top:0}
+@media(min-width:48rem){.areas>li,.cat>li{grid-template-columns:14rem 1fr}}
+.areas h3,.cat h3{font-size:1.4rem}
+.areas p,.cat p{margin:0 0 .75rem}
+.tags,.soon{color:var(--muted);font-size:.95rem}
+
+/* Cartões de trabalho (como a pré-visualização do WhatsApp) */
+.cards{display:grid;gap:1rem;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr))}
+.card{display:flex;flex-direction:column;background:var(--frame);border-radius:.6rem;overflow:hidden;text-decoration:none;color:var(--ink);transition:transform .2s}
+.card:hover{transform:translateY(-3px)}
+.thumb{position:relative;aspect-ratio:16/9;background:var(--link);display:grid;place-items:center}
+.thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.play{position:relative;width:3.2rem;height:3.2rem;border-radius:50%;background:rgba(0,0,0,.55);display:grid;place-items:center}
+.play::after{content:"";margin-left:.2rem;border-style:solid;border-width:.6rem 0 .6rem 1rem;border-color:transparent transparent transparent #fff}
+.card .body{padding:.9rem 1rem 1rem;display:flex;flex-direction:column;gap:.35rem}
+.card strong{font-family:var(--display);font-size:1.05rem;line-height:1.25}
+.card .desc{color:var(--muted);font-size:.92rem;margin:0}
+.card .dom{color:var(--muted);font-size:.85rem}
+
+/* =====================================================
+   5. FORMAÇÃO (linha do tempo)
+   ===================================================== */
+.tl{list-style:none;margin:0;padding:0 0 0 1.5rem;border-left:3px solid var(--link)}
+.tl li{position:relative;padding:0 0 1.75rem}
+.tl li::before{content:"";position:absolute;left:calc(-1.5rem - 8px);top:.55rem;width:13px;height:13px;border-radius:50%;background:var(--accent);border:3px solid var(--bg)}
+.tl h3{font-size:1.2rem}
+.tl span{color:var(--muted);font-size:.95rem}
+
+/* Quem prefere menos movimento vê tudo parado */
+@media(prefers-reduced-motion:reduce){.l{animation:none}.slide{transition:none}html{scroll-behavior:auto}}
